@@ -7,16 +7,10 @@ const TimelineItem = ({ data }) => (
                 {data.category.tag}
             </span>
             <time>{data.date}</time>
-            <p>{data.text}</p>
-            {data.link && (
-                <a
-                    href={data.link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {data.link.text}
-                </a>
+            {data.img && (
+                <img src={data.img.url} />
             )}
+            <p>{data.text}</p>
             <span className="circle" />
         </div>
     </div>

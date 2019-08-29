@@ -1,27 +1,21 @@
 import React from 'react';
 import TimelineItem from './TimelineItem.js';
+import Dateheader from './Dateheader.js';
+import todayData from './data.js';
 
-let timelineData = [
-    {
-        text: 'Hello world! of my first React app',
-        date: 'August 15, 2019',
-        category: {
-            tag: 'coding',
-            color: '#018f69'
-        },
-//        link: {
-//            url:'',
-//            text: 'Read more'
-//        }
-    }
-];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let today = new Date();
+let todayString = months[today.getMonth()]+" "+today.getDate();
 
 const Timeline = () =>
-    timelineData.length > 0 && (
-        <div className="timeline-container">
-            {timelineData.map((data, idx) => (
-                <TimelineItem data={data} key={idx} />
-            ))}
+    todayData.length > 0 && (
+        <div>
+          <Dateheader data={todayString}/>
+          <div className="timeline-container">
+              {todayData.map((data, idx) => (
+                  <TimelineItem data={data} key={idx} />
+              ))}
+          </div>
         </div>
     );
 
