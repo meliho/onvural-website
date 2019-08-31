@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dateHeader {
+h2 {
   margin: 20px 20px;
 }
 
@@ -21,7 +21,9 @@ code {
     flex-direction: column;
     position: relative;
     margin: 40px 0;
-}.timeline-container::after {
+}
+
+.timeline-container::after {
     background-color: #e17b77;
     content: '';
     position: absolute;
@@ -37,7 +39,9 @@ code {
     position: relative;
     margin: 10px 0;
     width: 50%;
-}.timeline-item:nth-child(odd) {
+}
+
+.timeline-item:nth-child(odd) {
     align-self: flex-end;
     justify-content: flex-start;
     padding-left: 30px;
@@ -73,6 +77,10 @@ code {
     right: auto;
     left: -7.5px;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item-content img {
+  margin: 10px 0;
 }
 
 .timeline-item-content .tag {

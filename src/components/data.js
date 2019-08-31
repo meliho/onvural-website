@@ -8,7 +8,7 @@ let timelineData = [
         }
     },
     {
-        date: 'August 29, 2019',
+        date: 'August 30, 2019',
         text: 'Test new date filter',
         category: {
           tag: 'testing',

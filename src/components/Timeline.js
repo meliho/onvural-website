@@ -1,22 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import TimelineItem from './TimelineItem.js';
-import Dateheader from './Dateheader.js';
+import DefaultImage from './DefaultImage.js';
+import DefaultBlogLink from './DefaultBlogLink.js';
 import todayData from './data.js';
 
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let today = new Date();
-let todayString = months[today.getMonth()]+" "+today.getDate();
+class Timeline extends Component {
 
-const Timeline = () =>
-    todayData.length > 0 && (
-        <div>
-          <Dateheader data={todayString}/>
-          <div className="timeline-container">
-              {todayData.map((data, idx) => (
-                  <TimelineItem data={data} key={idx} />
-              ))}
-          </div>
+  render() {
+    if(todayData.length > 0) {
+      return (
+        <div className="timeline-container">
+            {todayData.map((data, idx) => (
+                <TimelineItem data={data} key={idx} />
+            ))}
         </div>
-    );
+      );
+    } else {
+      return (
+        <div className="timeline-container">
+          <DefaultImage />
+          <DefaultBlogLink />
+        </div>
+      );
+    }
+  }
+}
 
 export default Timeline;

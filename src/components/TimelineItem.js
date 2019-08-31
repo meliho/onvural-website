@@ -8,7 +8,7 @@ const TimelineItem = ({ data }) => (
             </span>
             <time>{data.date}</time>
             {data.img && (
-                <img src={data.img.url} />
+                <img src={data.img.url} alt="{data.text}"/>
             )}
             <p>{data.text}</p>
             <span className="circle" />
