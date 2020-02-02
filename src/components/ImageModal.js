@@ -12,7 +12,7 @@ class ImageModal extends Component {
         centered
         >
         <Modal.Body>
-          <img src={this.props.modalimageurl} alt="Large version of the homepage image" onClick={this.imagePopup}/>
+          <img src={this.props.modalimageurl} alt="Large version of the homepage photo" onClick={this.imagePopup}/>
         </Modal.Body>
       </Modal>
     );

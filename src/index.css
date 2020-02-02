@@ -16,6 +16,12 @@ code {
     monospace;
 }
 
+#loading-screen {
+  padding: 0;
+  margin: 25% auto;
+  text-align: center;
+}
+
 .timeline-container {
     display: flex;
     flex-direction: column;
