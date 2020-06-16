@@ -7,18 +7,6 @@ import DefaultBlogLink from './DefaultBlogLink.js';
 import ImageModal from './ImageModal.js';
 import LoadingScreen from './LoadingScreen.js';
 
-// Format for the blob
-// [
-//     {
-//         date: 'August 31, 2019',
-//         text: 'Hello world! of my first React app',
-//         category: {
-//             tag: 'coding',
-//             color: '#018f69'
-//         }
-//     }
-// ]
-
 class Timeline extends Component {
   constructor(props) {
     super(props);
@@ -59,6 +47,7 @@ class Timeline extends Component {
               {this.state.timelineData.map((data, idx) => (
                   <TimelineItem data={data} key={idx} />
               ))}
+              <DefaultBlogLink />
               <ImageModal
                 show={this.state.showBigImage}
                 onHide={this.triggerImageModal}
