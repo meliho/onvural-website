@@ -1,0 +1,47 @@
+/* Custom styles for Onvural Family Website */
+
+.tile {
+    transition: all 0.3s ease-in-out;
+    transform: perspective(1000px);
+}
+
+.tile:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
+}
+
+.tile-image {
+    filter: sepia(80%) saturate(120%) hue-rotate(15deg);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tile:hover .tile-image {
+    opacity: 0;
+}
+
+.tile-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tile:hover .tile-overlay {
+    opacity: 1;
+}
+
+.tile-content {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tile:hover {
+        transform: none;
+    }
+    
+    .tile-overlay {
+        opacity: 0.8;
+    }
+    
+    .tile:hover .tile-overlay {
+        opacity: 1;
+    }
+} 
